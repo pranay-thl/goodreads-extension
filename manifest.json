@@ -1,0 +1,22 @@
+{
+  "name": "Goodreads",
+  "description": "New tab for Goodreads",
+  "version": "0.1",
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "https://www.goodreads.com/*/",
+    "storage",
+    "tabs"
+  ],
+  "browser_action": {
+      "default_icon": "icon.png"
+   },
+  "manifest_version": 2
+}

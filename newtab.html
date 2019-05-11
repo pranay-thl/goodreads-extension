@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Goodreads Shelf</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="newtab.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script src="jquery.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+</head>
+
+<body style="overflow-x: hidden;">
+  <div id="r1" class="row align-items-center justify-content-center"
+    style="padding-top: 50px;padding-left:100px;padding-right:100px;display:none">
+    <div class="col-md-9 align-self-center text-center">
+      <div class="text-center">
+        <h1 id="heading_id"></h1>
+      </div>
+    </div>
+    <div class="col-md-2 align-self-center" style="font-size:14px">
+      <button id="open_modal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Options
+      </button>
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Options</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-12 align-self-center">
+                  <div class="dropdown">
+                    <button id="shelf_text" type="button" class="btn btn-primary dropdown-toggle"
+                      data-toggle="dropdown">
+                      Shelves
+                    </button>
+                    <div class="dropdown-menu" id="shelf_dropdown">
+                      <a class="dropdown-item" href="#" value="currently-reading">Currently Reading</a>
+                      <a class="dropdown-item" href="#" value="read">Read</a>
+                      <a class="dropdown-item" href="#" value="to-read">Want to Read</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-12 align-self-center text-center">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">No. of Books</span>
+                    </div>
+                    <input type="text" class="form-control" id="book_number" name="books" placeholder="1-200">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Page Number</span>
+                    </div>
+                    <input type="text" class="form-control" id="page_number" name="page" placeholder="1-N">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button id="modal_submit" type="button" class="btn btn-danger">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1 align-self-center">
+      <a href="#">
+          <i id="logout_button" class="fas fa-sign-out-alt"></i>
+      </a>
+    </div>
+  </div>
+  <div id="r2" class="row align-items-center justify-content-center"
+    style="padding-top: 50px;padding-bottom:100px;padding-left:100px;padding-right:100px;display:none">
+    <div class="container-fluid" id="content"></div>
+  </div>
+  <div id="r3" class="row align-items-center justify-content-center"
+    style="padding-top: 150px;padding-left:100px;padding-right:100px;display: none;">
+    <div class="col-md-4 align-self-center text-center">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Name</span>
+        </div>
+        <input type="text" class="form-control" id="user_name" name="user" required>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Goodreads User Id</span>
+        </div>
+        <input type="text" class="form-control" id="user_id" name="user_id" required>
+        <div class="input-group-append">
+          <button id="user_submit" class="btn btn-success" type="submit">Go</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="r4" class="row align-items-center justify-content-center"
+    style="padding-top: 150px;padding-left:100px;padding-right:100px;">
+    <div class="spinner-border text-muted"></div>
+    <div class="spinner-border text-primary"></div>
+    <div class="spinner-border text-success"></div>
+    <div class="spinner-border text-info"></div>
+    <div class="spinner-border text-warning"></div>
+    <div class="spinner-border text-danger"></div>
+    <div class="spinner-border text-secondary"></div>
+    <div class="spinner-border text-dark"></div>
+    <div class="spinner-border text-light"></div>
+  </div>
+</body>
+<script src="newtab.js"></script>
+
+</html>
