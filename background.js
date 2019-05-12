@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener(
         //console.log(request);
         if (request.new_tab === "yes") {
             var xhr = new XMLHttpRequest();
-            let request_str = "https://www.goodreads.com/review/list?v=2&id=" + request.user_id + "&key=pmZqeolw9HySmphhPnp7NA&per_page=50";
+            let request_str = "https://www.goodreads.com/review/list?v=2&id=" + request.user_id + "&key=pmZqeolw9HySmphhPnp7NA";
             if (request.shelf && (["currently-reading", "to-read", "read"].indexOf(request.shelf) > -1)) {
                 request_str += ("&shelf=" + request.shelf);
             }
